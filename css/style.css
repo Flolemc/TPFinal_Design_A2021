@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-style: normal;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Bebas Neue', cursive;
+    background-image: url("../images/fond.png");
+    background-size: 100vw;
+    overflow-x: hidden;
+}
+
+/* --- | Header Style Général | --- */
+
+#menu {
+    width: 100vw;
+    padding: 1% 1%;
+    height: 15vh;
+    min-height: 15vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-image: url("../images/bordureSite.png");
+}
+
+.logo {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 3.5%;
+    width: 20%;
+    right: 0;
+    top: 0.8%;
+    text-align: center;
+    height: auto;
+    z-index: 2;
+}
+
+.boutonPanier .boutonBG {
+    width: 100%;
+    object-fit: cover;
+}
+
+.boutonPanier:hover .boutonBG {
+    content: url(../images/boutonPanierHover.png);
+}
+
+.logoPanier {
+    position: relative;
+    width: 80%;
+    left: 1vw;
+    top:-25vh;
+    transition: 0.5s;
+}
+
+.boutonPanier:hover .logoPanier{
+    transform: rotate(10deg);
+}
+
+#sectionProduits {
+    align-self: center;
+    background-color: rgba(243, 219, 174, 0.616);
+    box-shadow: rgba(80, 80, 80, 0.432) 3px 3px 10px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.sectionHeader {
+    background-image: url("../images/bordureSite.png");
+    width: 69.5vw;
+    height: 15%;
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+}
+
+.sectionTitre {
+    background-color: rgb(255, 181, 181);
+    width: 35%;
+    height: 20vh;
+    border: solid 0.35vh rgb(214, 145, 158);
+    margin: 0% 32%;
+    text-align: center;
+    padding-top: 0vh;
+    border-radius: 0 0 100vw 100vw;
+}
+
+.sectionTitre h2 {
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 9vh;
+    padding-top: 4vh;
+}
+
+.produits {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2.6vw;
+    padding-top: 16vh;
+}
+
+.produit{
+    margin: 0.5vw;
+    width: 15vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    box-shadow: rgba(80, 80, 80, 0.432) 3px 3px 10px;
+}
+
+.produit div {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    transition: 0.5s;
+}
+
+.titreProduit {
+    color: rgba(255, 255, 255, 0);
+    font-family: 'Dancing Script', cursive;
+    font-size: 5vh;
+    align-self: center;
+    justify-self: center;
+    transition: 0.5s;
+}
+.produit div:hover .titreProduit{
+    color: white;
+}
+
+.produit div:hover {
+    background-color:rgba(117, 76, 0, 0.342);
+    cursor: pointer;
+}
+
+.produit:nth-child(1) {
+    background-image: url(../images/imgProduit1.jpeg);
+}
+
+.produit:nth-child(2) {
+    background-image: url(../images/imgProduit2.jpeg);
+}
+
+.produit:nth-child(3) {
+    background-image: url(../images/imgProduit3.jpeg);
+}
+
+.produit:nth-child(4) {
+    background-image: url(../images/imgProduit4.jpg);
+}
+
+/* --- | Style Général Footer | --- */
+
+#footer {
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: static;
+    width: 100vw;
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.4vw;
+    letter-spacing: 0.1vw;
+    color: white;
+}
+
+#footer .iconesFooter{
+    display: flex;
+    width: 33vw;
+    padding: 1rem;
+}
+
+#footer .iconesFooter .iconeFooter img {
+    max-width: 3.3vw;
+    min-width: 1vw;
+    padding: 0.8vw;
+    padding-bottom: 0.6vw;
+    text-align: center;
+}
+
+#footer .iconesFooter .iconeFooter {
+    border-radius: 100%;
+    border-color: transparent;
+    width: max-content;
+    height: max-content;
+    margin: 0.5rem;
+    background-color: white;
+}
+
+#footer .iconesFooter .iconeFooter:hover {
+    box-shadow: rgb(54, 103, 109) 2px 2px 5px;
+}
+
+.texteAdresse a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(0, 126, 113);
+}
+
+/* --- | Carte Style Général | --- */
+
+#carteHeure{
+    display:none;
+}
+
+.fermerCarte {
+    position: relative;
+    font-size: 3vw;
+    top: -27vh;
+    left: 1vw;
+    cursor: pointer;    
+    color: rgb(120, 200, 205);
+    transition: 0.2s;
+}
+
+.fermerCarte:hover {
+    color: rgb(255, 192, 192);
+    left: 0.9vw;
+}
+
+.carteActive {
+    display: block !important;
+    position: fixed;
+    top: 5vh;
+    left: 15vw;
+    width: 70vw;
+    height: 90vh;
+    background-color: white;
+    box-shadow: rgba(80, 80, 80, 0.432) 3px 3px 10px;
+    z-index: 3;
+}
+
+.conteneurInfo {
+    width: 99%;
+    height: 97%;
+    background-image: url("../images/fond.png");
+    background-color: rgb(220, 239, 239);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carte {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 100%;
+}
+
+.carte iframe {
+    margin: 1vw 2vw 0vw 2vw;
+    border: solid 5px rgb(255, 192, 192);
+}
+
+.carte h2 {
+    font-size: 2.3vw;
+    letter-spacing: 0.12vw;
+    padding-top: 1.2%;
+    color: rgb(120, 200, 205);
+    padding-left: 10.5%;
+}
+
+.heures {
+    width: 48%;
+    height: 45%;
+    position: relative;
+    left: 1em;
+    align-self: center;
+    box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.233);
+    background-color: rgb(255, 255, 255);
+}
+
+.texteHeures {
+    padding: 2.6vw;
+}
+
+.heures h2 {
+    font-size: 4vw;
+    letter-spacing: 0.3vw;
+    color: rgb(244, 170, 184);
+}
+
+.heures h3 {
+    font-size: 3vw;
+    letter-spacing: 0.2vw;
+    line-height: 2.8vw;
+    color: rgb(120, 200, 205);
+}
+
+.heures p {
+    font-size: 1.5vw;
+    letter-spacing: 0.1vw;
+    line-height: 6vw;
+    color: rgb(120, 200, 205);
+}
+
+/* --- | Caroussel Style Général | --- */
+
+#sectionCaroussel {
+    margin-top: 10vh;
+}
+
+#sectionCaroussel .conteneurCaroussel img {
+    width:100%;
+    height: 100%;
+    margin-bottom: 0;
+    object-fit: cover;
+}
+
+.conteneurCaroussel {
+    object-fit: cover;
+    max-width: 60vw;
+    position: relative;
+    padding-bottom: 0;
+    align-self: center;
+    z-index: 1;
+    margin: auto;
+    background-color: white;
+  }
+  
+  /* - Images Caroussel - */
+.imgCaroussel {
+    display: none;
+    border: solid 0.5vw rgb(161, 123, 105);
+    border-radius: 0.5em;
+    margin-bottom: 0;
+    object-fit: cover;
+  }
+  
+  /* - Boutton Caroussel - */
+  .boutonArriere, .boutonAvant {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: 20%;
+    margin-top: -22px;
+    transition: 0.6s ease;
+    border-radius: 3px 0px 0px 3px;
+    user-select: none;
+    z-index: -1;
+  }
+
+  .boutonArriere {
+    left:-5vw;
+  }
+
+  .boutonArriere:hover {
+    left:-7vw;
+  }
+  
+  .boutonAvant {
+    right: -5vw;
+    transform: rotate(180deg);
+  }
+
+  .boutonAvant:hover {
+    right: -7vw;
+    transform: rotate(180deg);
+  }
+  
+  .boutonArriere:hover, .boutonAvant:hover {
+    content: url(../images/boutonFlecheHover.png);
+  }
+  
+  /* - Texte sur image - */
+  .texteCaroussel {
+    color: #f2f2f2;
+    padding: 3vh 12px;
+    border-radius: 0.5em;
+    position: absolute;
+    width: 90%;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    box-shadow: rgba(75, 75, 75, 0.411) 5px 5px 10px;
+  }
+
+  .texte1{
+    left: 3.4%;
+    bottom: 40%;
+    font-size: 2.5vw;
+    background-color: rgba(82, 60, 35, 0.466);
+  }
+
+  .texte2 {
+    left: 3.4%;
+    bottom: 8%;
+    font-size: 2.5vw;
+    background-color: rgba(224, 145, 54, 0.479);
+  }
+
+  .texte3 {
+    left: 13.8%;
+    bottom: 10%;
+    font-size: 2.5vw;
+    background-color: rgba(255, 139, 139, 0.479);
+    width: 70%;
+  }
+  
+  /* - Points - */
+  .pointCaroussel {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .pointCaroussel:hover {
+    background-color: #717171;
+  }
+  
+  /* - Animation transition image - */
+  .transition {
+    animation-name: transitionImg;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes transitionImg {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

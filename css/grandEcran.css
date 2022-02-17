@@ -1,0 +1,102 @@
+/* ============================= STYLE GRAND ÉCRANS ========================= */
+
+@media (min-width: 993px) {
+
+    /* --- Header --- */
+    .menuFull {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 0 5%;
+        margin-left: 1%;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+
+    
+    .boutonPanier {
+        position: fixed;
+        display: flex;
+        width: 10vw;
+        top: -0.5vh;
+        left: 86.3vw;
+        z-index: 4;
+    }
+    
+    .logoPanier {
+        position:sticky;
+        right: 4.5vw;
+        align-self: center;
+    }
+    
+    .menuFull div.style1{
+        position: relative;
+        width: fit-content;
+        height: 95%;
+        box-shadow: rgb(88, 88, 88) 2px 2px 5px;
+    }
+    
+    .menuFull div.style1:nth-child(3){
+        justify-self: flex-end;
+    }
+    
+    .menuFull div .boutonBG{
+        max-width: 13vw;
+        width: max-content;
+        max-height: 100%;
+    }
+    
+    .menuFull div h2 {
+        font-family: 'Bebas Neue', cursive;;
+        font-size: 2.4vw;
+        letter-spacing: 0.1vw;
+        color: white;
+        text-shadow: palevioletred 3px 3px 0px;
+        position: absolute; 
+        top: 27%; 
+        text-align: center;
+        width: 100%;
+    }
+    
+    .menuFull div:hover img{
+        content:url(../images/boutonHover.png);
+    }
+    
+    .menuFull div:hover{
+        cursor: pointer;
+    }
+    
+    .menuFull div:hover h2 {
+        text-shadow: rgb(112, 200, 216) 3px 3px 0px;
+    }
+    
+    .boutonBurger {
+        display: none;
+    }
+    
+    .menuBurger {
+        display: none;
+    }
+    
+    .boutonCarte {
+        display: none;
+    }
+    
+    /* --- Caroussel --- */
+
+    .boutonArriere p{
+        display: none;
+    }
+
+    .boutonAvant p{
+        display: none;
+    }
+    
+    /* --- Section Produits --- */
+    
+    /* --- Footer --- */
+    
+    } /* fin style grand écrans */

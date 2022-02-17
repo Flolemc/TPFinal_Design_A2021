@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petit Lapin : Patisserie sans alergènes et végane</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/grandEcran.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/tablette.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ----------- HEADER ------------ -->
+    <header id="menu">
+
+        <!-- Menu Burger -->
+
+        <div class="menuBurger">
+
+            <div class="boutonBurger">
+                <img class="imgBoutonBurger" src="images/boutonPanier.png">
+                <img class="lignes" src="images/bars-solid.svg">
+                <input type="checkbox" class="burgerCheck">
+                </input>
+                <div class="navigationBurger">
+                    <button class="boutonAPropos style1">
+                        <h2>À Propos</h2>
+                    </button>
+
+                    <button class="boutonNosProduits style1">
+                        <h2>Nos Produits</h2>
+                    </button>
+
+                    <button class="boutonEvenement style1">
+                        <h2>Évènements</h2>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Menu Grand écrans -->
+        <div class="menuFull">
+
+            <div class="bouton style1">
+                <h2>À PROPOS</h2>
+                <img class="boutonBG" src="images/bouton.png">
+            </div>
+
+            <div class="bouton style1">
+                <h2>NOS PRODUITS</h2>
+                <img class="boutonBG" src="images/bouton.png">
+            </div>
+
+            <div class="bouton style1">
+                <h2>ÉVÈNEMENTS</h2>
+                <img class="boutonBG" src="images/bouton.png">
+            </div>
+
+        </div>
+
+        <!-- Logo -->
+        <img src="images/logo-petitlapin.png" alt="Logo Petit Lapin" class="logo">
+
+        <div class="boutonPanier style2">
+            <img class="boutonBG" src="images/boutonPanier.png">
+            <img class="logoPanier" src="images/logoPanier.png">
+        </div>
+
+    </header>
+
+    <!-- ----------- SECTION : CAROUSSEL ------------ -->
+    <section id="sectionCaroussel">
+        <div class="conteneurCaroussel">
+
+            <!-- Images -->
+            <div class="imgCaroussel transition">
+                <img src="images/imgCaroussel1.jpg">
+                <div class="texteCaroussel texte1">Pâtisserie sans allergène/végétalienne!</div>
+            </div>
+
+            <div class="imgCaroussel transition">
+                <img src="images/imgCaroussel2.jpg">
+                <div class="texteCaroussel texte2">Les tartelettes aux pommes du Québec sont arrivées!</div>
+            </div>
+
+            <div class="imgCaroussel transition">
+                <img src="images/imgCaroussel3.jpg">
+                <div class="texteCaroussel texte3">Ateliers de décoration de biscuits ou de gâteau pour les enfants de 5
+                    à 12
+                    ans!</div>
+            </div>
+
+            <!-- Boutons Avant/Arriere -->
+            <div class="boutonArriere" onclick="prochaineImg(-1)">
+                <p>&#10094;</p>
+                <img src="images/boutonFleche.png">
+            </div>
+
+            <div class="boutonAvant" onclick="prochaineImg(1)">
+                <p>&#10095;</p>
+                <img src="images/boutonFleche.png">
+            </div>
+        </div>
+        <br>
+
+        <!-- Points -->
+        <div style="text-align:center">
+            <span class="pointCaroussel" onclick="imgAffichee(1)"></span>
+            <span class="pointCaroussel" onclick="imgAffichee(2)"></span>
+            <span class="pointCaroussel" onclick="imgAffichee(3)"></span>
+        </div>
+    </section>
+
+    <!-- ----------- SECTION : PRODUITS ------------ -->
+    <section id="sectionProduits">
+
+        <!-- Titre -->
+        <div class="sectionHeader">
+            <div class="sectionTitre">
+                <h2>Produits</h2>
+            </div>
+        </div>
+
+        <!-- Produits -->
+        <div class="produits">
+
+            <div class="produit a">
+                <div>
+                    <p class="titreProduit">Nos pâtisseries</p>
+                </div>
+            </div>
+
+            <div class="produit b">
+                <div>
+                    <p class="titreProduit">Nos pains</p>
+                </div>
+            </div>
+
+            <div class="produit c">
+                <div>
+                    <p class="titreProduit">Nos gâteaux</p>
+                </div>
+            </div>
+
+            <div class="produit d">
+                <div>
+                    <p class="titreProduit">Notre livre</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ----------- MENU CARTE ------------ -->
+    <section>
+        <!-- Bouton -->
+        <button class="boutonCarte" onclick="afficheCarte()">
+            <img src="images/iconeCarte.svg">
+        </button>
+
+        <!-- Carte -->
+        <div id="carteHeure">
+            <div class="conteneurInfo">
+                <div class="carte">
+                    <a class="fermerCarte" onclick="fermerCarte()">&#10094;</a>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d946.4179665425416!2d-73.60764341343231!3d45.522367331913976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc9197819b3105f%3A0xbe3db0ad66ede1e9!2s1051%20Bernard%20Ave%2C%20Outremont%2C%20QC%20H2V%201V1!5e0!3m2!1sen!2sca!4v1638986350678!5m2!1sen!2sca"
+                        width="80%" height="80%" allowfullscreen="" loading="lazy"></iframe>
+                    <h2>1051 Bernard Avenue, Outremont,</br> Quebec, H2V 1V1</h2>
+                </div>
+                <div class="heures">
+                    <div class="texteHeures">
+                        <h2>Ouvert</h2>
+                        <h3>Jeudi à Dimanche</br>10h - 14h</h3>
+                        <p>*Livraison gratuite partout à Montréal </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------- FOOTER ------------ -->
+    <footer id="footer">
+
+        <!-- Texte Adresse -->
+        <div class="texteAdresse">
+            <a onclick="afficheCarte()">1051 Bernard Avenue, Outremont, Quebec, H2V 1V1</a>
+            <p>Téléphone : (514) 750-4077</p>
+        </div>
+
+        <!-- Icônes Footer -->
+        <div class="iconesFooter">
+
+            <button class="iconeFooter">
+                <img src="images/iconeInsta.png">
+            </button>
+
+            <button class="iconeFooter">
+                <img src="images/iconeFacebook.png">
+            </button>
+
+            <button class="iconeFooter">
+                <img src="images/iconeTwitter.png">
+            </button>
+
+            <button class="iconeFooter">
+                <img src="images/iconeCourriel.png">
+            </button>
+
+        </div>
+
+        <!-- Texte Livraison -->
+        <div class="texteLivraison">
+            <p>Livraison gratuite partout à Montréal!</p>
+        </div>
+
+    </footer>
+    <script src="js/caroussel.js"></script>
+    <script src="js/carte.js"></script>
+    <script src="js/boutonPanier.js"></script>
+</body>
+
+</html>
